@@ -59,13 +59,15 @@
             </div>
           </div>
           <div class="contacts container">
-            <div class="totalUser d-flex justify-content-between">
+            <div v-for="(contact, id) of contacts" 
+            @click="currentUser(contact.id)"
+            class="totalUser d-flex justify-content-between">
               <div class="user d-flex align-items-start pt-2">
                 <div class="imgUser">
-                  <img class="img-fluid" src="./img/avatar_1.png" alt="">
+                  <img class="img-fluid" :src="contact.avatar" :alt="contact.name">
                 </div>
                 <div class="infoUser d-flex flex-column ps-3">
-                  <h6 class=" ">Marco</h6>
+                  <h6 class=" ">{{contact.name}}</h6>
                   <sub class="lightGrey">Ultimo messaggio inviato</sub>
                 </div>
               </div>
@@ -98,7 +100,11 @@
           </div>
         </div>
         <div class="bodyRight container">
-          
+          <div class="chatUser">
+            <p>{{contacts[activeId].messages[0].message}}</p>
+            <p>2</p>
+            <p>3</p>
+          </div>
         </div>
         <div class="writeMessage container d-flex align-items-center">
           <i class="px-4 fa-regular fa-face-smile"></i>

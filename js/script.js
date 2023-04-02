@@ -178,11 +178,18 @@ createApp({
             }
           ],
         }
-      ]
+      ],
+      activeId: 1,
 
 
     }
   },
-
+  
+  methods :{
+    currentUser(id){
+      this.activeId = id;
+      console.log(id);
+    }
+  }
 
 }).mount('#app')
