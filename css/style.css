@@ -16,6 +16,9 @@ body{
   font-family: 'Roboto', sans-serif;
 
 }
+.lightGrey{
+  color: #b1b1b1;
+}
 
 .wrapper{
   height: calc(100vh - 50px);
@@ -80,6 +83,10 @@ body{
   height: 60px;
   width: 100%;
   background-color: #eaeaea;
+}
+
+.infoRightHeader{
+  width: 60px;
 }
 .bodyRight{
   height: calc(100% - 120px);
