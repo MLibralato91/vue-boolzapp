@@ -1,6 +1,5 @@
-*{
-  font-family: Arial, Helvetica, sans-serif;
-}
+
+  
 
 body{
   display: flex;
@@ -14,6 +13,8 @@ body{
     #d9dbd5 100%
     
   );
+  font-family: 'Roboto', sans-serif;
+
 }
 
 .wrapper{
@@ -25,7 +26,7 @@ body{
 
 
 .leftSide{
-  height: 100%;
+  height: calc(100vh - 50px);
   width: 40%;
   background-color: white;
 }
@@ -54,9 +55,26 @@ body{
   background-color: #8edafc;
 }
 .initChat{
-  height: 40px;
+  height: 50px;
   width: 100%;
   background-color: #f9f9f9;
+}
+#inputGroup-sizing-default,
+#inputGroupInit
+{
+  background-color: white;
+  border-radius: 0;
+  height: 40px;
+  color: #b1b1b1;
+}
+.contacts{
+  height: calc(100vh - 240px);
+  width: 100%;
+  overflow-y: auto;
+
+}
+.user{
+  height: 60px;
 }
 .rightHeader{
   height: 60px;
