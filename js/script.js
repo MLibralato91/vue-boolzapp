@@ -185,7 +185,7 @@ createApp({
         }
       ],
       activeId: 0,
-      userVisible: false,
+    
 
     }
   },
@@ -193,7 +193,6 @@ createApp({
   methods :{
     currentUser(id){
       this.activeId = id;
-      this.userVisible = !this.userVisible;
       console.log(id);
     }
   }

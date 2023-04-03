@@ -19,8 +19,8 @@ body{
 .lightGrey{
   color: #b1b1b1;
 }
-.bgGrey{
-  background-color: #b1b1b1;
+.active{
+  background-color: #e7e3e3;
 }
 .wrapper{
   height: calc(100vh - 50px);
