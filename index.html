@@ -62,6 +62,7 @@
           <div class="contacts container">
             <div v-for="(contact, id) in contacts" :key="contact.id"
             @click="currentUser(id)"
+            :class="{'bgGrey': userVisible === contact.visible}" 
             class="totalUser d-flex justify-content-between">
               <div class="user d-flex align-items-start pt-2">
                 <div class="imgUser">
@@ -81,7 +82,7 @@
       </div>
       <div class="rightSide">
         <div class="rightHeader container">
-          <div class="totalUser d-flex justify-content-between">
+          <div class="d-flex justify-content-between">
             <div class="user d-flex align-items-center">
               <div class="imgUser">
                 <img class="img-fluid" :src="contacts[activeId].avatar" alt="">

@@ -19,7 +19,9 @@ body{
 .lightGrey{
   color: #b1b1b1;
 }
-
+.bgGrey{
+  background-color: #b1b1b1;
+}
 .wrapper{
   height: calc(100vh - 50px);
   width: 1200px;
@@ -101,6 +103,9 @@ body{
   height:60px;
   width: 100%;
   background-color: #f3eeea;
+}
+.totalUser:hover{
+  background-color: #b1b1b15e;
 }
 .boxMsg{
   width: 45%;
