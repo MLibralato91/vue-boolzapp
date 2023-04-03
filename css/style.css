@@ -24,6 +24,7 @@ body{
   height: calc(100vh - 50px);
   width: 1200px;
   display: flex;
+  min-width: 900px;
 
 }
 
@@ -99,4 +100,14 @@ body{
   height:60px;
   width: 100%;
   background-color: #f3eeea;
+}
+
+.sent{
+  background-color: white;
+}
+
+.received{
+  text-align: end;
+  background-color: rgb(182, 217, 129);
+
 }
