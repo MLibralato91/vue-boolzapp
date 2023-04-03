@@ -208,6 +208,16 @@ createApp({
 
       this.contacts[id].messages.push(newMessage);
       this.newMsg = '';
+
+      setTimeout(() => {
+        newMessage = {
+          date: '10/01/2020 15:51:00',
+          message: 'Ok!!',
+          status: 'received'
+        }
+        this.contacts[id].messages.push(newMessage);
+        
+      }, "1000");
     }
   }
 
