@@ -115,7 +115,7 @@
         <div class="writeMessage container d-flex align-items-center">
           <i class="px-4 fa-regular fa-face-smile"></i>
           <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" placeholder="Scrivi un messaggio"
-          v-model="newMsg.message" @keyup.enter="addMsg()">
+          v-model="newMsg" @keyup.enter="addMsg(activeId)">
           <i class="px-4 fa-solid fa-microphone"></i>
         </div>
 

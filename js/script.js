@@ -185,11 +185,8 @@ createApp({
         }
       ],
 
-      newMsg: {
-        date: '10/01/2020 15:30:55',
-        message: '',
-        status: 'sent'
-      },
+      newMsg: '',
+
       activeId: 0,
 
 
@@ -201,9 +198,16 @@ createApp({
       this.activeId = id;
       console.log(id);
     },
-    addMsg() {
-      this.contacts.messages.unshift({ ...this.newMsg });
-      this.newMsg.message = '';
+    addMsg(id) {
+
+      newMessage = {
+        date: '10/01/2020 15:51:00',
+        message: this.newMsg,
+        status: 'sent'
+      }
+
+      this.contacts[id].messages.push(newMessage);
+      this.newMsg = '';
     }
   }
 
