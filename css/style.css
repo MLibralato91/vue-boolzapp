@@ -94,6 +94,7 @@ body{
   width: 100%;
   background-image: url(../img/mine.jpg);
   overflow: auto;
+  padding: 20px 40px 0 40px;
   
 }
 .writeMessage{
@@ -101,13 +102,20 @@ body{
   width: 100%;
   background-color: #f3eeea;
 }
+.boxMsg{
+  width: 45%;
+  border-radius: 10px;
+  padding: 15px;
 
+}
 .sent{
-  background-color: white;
+  background-color:  rgb(182, 217, 129);
+  align-self: flex-end;
+  
 }
 
 .received{
-  text-align: end;
-  background-color: rgb(182, 217, 129);
+  
+  background-color: white;
 
 }
