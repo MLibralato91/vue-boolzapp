@@ -8,7 +8,7 @@ const { createApp } = Vue
 createApp({
   data() {
     return {
-      contacts : [
+      contacts: [
         {
           id: 1,
           name: 'Michele',
@@ -184,19 +184,28 @@ createApp({
           ],
         }
       ],
+
+      newMsg: {
+        date: '10/01/2020 15:30:55',
+        message: '',
+        status: 'sent'
+      },
       activeId: 0,
-    
+
 
     }
   },
-  
-  methods :{
-    currentUser(id){
+
+  methods: {
+    currentUser(id) {
       this.activeId = id;
       console.log(id);
+    },
+    addMsg() {
+      this.contacts.messages.unshift({ ...this.newMsg });
+      this.newMsg.message = '';
     }
   }
 
 }).mount('#app')
 
-//:class="{'bgGrey': userVisible === contacts.visible}"
