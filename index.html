@@ -104,7 +104,7 @@
         <div class="bodyRight container">
           <div class="chatUser">
             <div class="d-flex flex-column">
-              <p class="boxMsg d-flex flex-column" v-for="(msg, id) in contacts[activeId].messages" :class="msg.status">{{msg.message}}
+              <p class="boxMsg d-flex flex-column" v-for="(msg, id) in contacts[activeId].messages" :class="msg.status" ref="items">{{msg.message}}
 
                 <sub class="align-self-end lightGrey">12:00</sub>
               </p>
@@ -115,7 +115,7 @@
         <div class="writeMessage container d-flex align-items-center">
           <i class="px-4 fa-regular fa-face-smile"></i>
           <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" placeholder="Scrivi un messaggio"
-          v-model="newMsg" @keyup.enter="addMsg(activeId)">
+          v-model.trim="newMsg" @keyup.enter="addMsg(activeId)">
           <i class="px-4 fa-solid fa-microphone"></i>
         </div>
 

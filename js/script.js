@@ -1,6 +1,7 @@
 /*
 
  */
+const dt = luxon.DateTime;
 
 
 const { createApp } = Vue
@@ -201,7 +202,7 @@ createApp({
     addMsg(id) {
 
       newMessage = {
-        date: '10/01/2020 15:51:00',
+        date: dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECOND),
         message: this.newMsg,
         status: 'sent'
       }
@@ -211,11 +212,14 @@ createApp({
 
       setTimeout(() => {
         newMessage = {
-          date: '10/01/2020 15:51:00',
+          date: dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECOND),
           message: 'Ok!!',
           status: 'received'
         }
         this.contacts[id].messages.push(newMessage);
+        this.$nextTick(() => {
+          this.$refs.items[this.$refs.items.length - 1].scrollIntoView()
+        });
         
       }, "1000");
     }
