@@ -206,7 +206,8 @@ createApp({
       newMessage = {
         date: dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECOND),
         message: this.newMsg,
-        status: 'sent'
+        status: 'sent',
+
       }
 
       this.contacts[id].messages.push(newMessage);
@@ -222,14 +223,14 @@ createApp({
         this.$nextTick(() => {
           this.$refs.items[this.$refs.items.length - 1].scrollIntoView()
         });
-        
+
       }, "1000");
     },
-    filterContacts(){
-      this.contacts.forEach((contact)=>{
-        if(!contact.name.toLowerCase().includes(this.contactSearch.toLowerCase())){
+    filterContacts() {
+      this.contacts.forEach((contact) => {
+        if (!contact.name.toLowerCase().includes(this.contactSearch.toLowerCase())) {
           contact.visible = false;
-        }else{
+        } else {
           contact.visible = true;
         }
       })
