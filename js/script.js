@@ -192,6 +192,8 @@ createApp({
 
       contactSearch: '',
 
+      dateCurrent: dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECOND),
+
 
     }
   },
