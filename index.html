@@ -74,7 +74,7 @@
                 </div>
               </div>
               <div class="timeSent small lightGrey">
-                12:00
+                <p>{{contact.messages[contact.messages.length -1].date}}</p> 
               </div>
             </div>
           </div>
@@ -106,7 +106,7 @@
             <div class="d-flex flex-column">
               <p class="boxMsg d-flex flex-column" v-for="(msg, id) in contacts[activeId].messages" :class="msg.status" ref="items">{{msg.message}}
 
-                <sub class="align-self-end lightGrey">12:00</sub>
+                <sub class="align-self-end lightGrey">{{msg.date}}</sub>
               </p>
             </div>
 
