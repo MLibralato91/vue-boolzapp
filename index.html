@@ -56,13 +56,13 @@
               <div class="input-group-prepend">
                 <span class="input-group-text" id="inputGroup-sizing-default"><i class="fa-solid fa-magnifying-glass"></i></span>
               </div>
-              <input type="text" id="inputGroupInit" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" placeholder="Cerca o inizia una nuova chat">
+              <input type="text" id="chatFiltered" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" placeholder="Cerca o inizia una nuova chat" v-model="contactSearch" @keyup="filterContacts">
             </div>
           </div>
           <div class="contacts container">
             <div v-for="(contact, id) in contacts" :key="contact.id"
             @click="currentUser(id)"
-            :class="{'active': contact.id -1  === activeId}" 
+            :class="{'active': contact.id -1  === activeId, 'd-none': !contact.visible}" 
             class="totalUser d-flex justify-content-between">
               <div class="user d-flex align-items-start pt-2">
                 <div class="imgUser">

@@ -190,6 +190,8 @@ createApp({
 
       activeId: 0,
 
+      contactSearch: '',
+
 
     }
   },
@@ -222,6 +224,15 @@ createApp({
         });
         
       }, "1000");
+    },
+    filterContacts(){
+      this.contacts.forEach((contact)=>{
+        if(!contact.name.toLowerCase().includes(this.contactSearch.toLowerCase())){
+          contact.visible = false;
+        }else{
+          contact.visible = true;
+        }
+      })
     }
   }
 
