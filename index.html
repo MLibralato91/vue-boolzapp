@@ -104,7 +104,7 @@
         <div class="bodyRight container">
           <div class="chatUser">
             <div class="d-flex flex-column">
-              <p class="boxMsg d-flex flex-column" v-for="(msg, id) in contacts[activeId].messages" :class="msg.status" ref="items">{{msg.message}}
+              <p class="boxMsg d-flex flex-column text-break" v-for="(msg, id) in contacts[activeId].messages" :class="msg.status" ref="items">{{msg.message}}
 
                 <sub class="align-self-end lightGrey">{{msg.date}}</sub>
               </p>

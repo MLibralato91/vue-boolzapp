@@ -1,6 +1,9 @@
 /*
 
  */
+
+
+
 const dt = luxon.DateTime;
 
 
@@ -194,8 +197,9 @@ createApp({
 
       dateCurrent: dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECOND),
 
-
+      
     }
+    
   },
 
   methods: {
@@ -236,7 +240,11 @@ createApp({
           contact.visible = true;
         }
       })
+    },
+    deleteMsg(){
+
     }
+    
   }
 
 }).mount('#app')
